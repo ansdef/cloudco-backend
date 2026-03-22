@@ -19,4 +19,5 @@ COPY . .
 EXPOSE 3001
 
 # Start server
-CMD ["npm", "run", "dev"]
+RUN npm run build
+CMD ["npm", "run", "start"]
