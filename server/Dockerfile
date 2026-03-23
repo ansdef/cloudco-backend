@@ -6,4 +6,4 @@ RUN npm install -g typescript
 COPY server/ .
 RUN npm run build
 EXPOSE 8080
-CMD ["node", "dist/index.js"]
+CMD ["sh", "-c", "node dist/config/seed.js && node dist/index.js"]
